@@ -1,0 +1,42 @@
+<div class="container">
+ 
+	<fieldset class="location">
+		<legend>所在位置</legend>
+		<h2>經度: {{lng}}</h2>
+		<h2>緯度: {{lat}}</h2>
+	</fieldset>
+
+  @if (url) {
+		<iframe width="100%" height="72%"  frameborder="0" scrolling="no" marginheight="0" 
+			marginwidth="0" id="gmap_canvas"
+			[src]="url | safe" >
+		</iframe>
+		<div style="display: flex; align-items: center; gap: .5em;">
+			<button mat-flat-button color="accent" class="daka-btn" (click)="punchIn()">上班打卡</button>
+			<button mat-flat-button color="primary" class="daka-btn" (click)="punchOut()">下班打卡</button>
+		</div>
+		<div style="display: flex; align-items: center; gap: .5em; margin-top: .5em;">
+			<button mat-flat-button color="accent" class="daka-btn" [routerLink]="['/punch/punch-list']">歷史打卡紀錄</button>
+		</div>
+  }
+
+</div>
+
+<ng-template #punchTmpl>
+	<h4 mat-dialog-title class="dialog-title">
+		打卡成功
+		<mat-icon class="x-icon" style="color: green;">check_circle</mat-icon>
+	</h4>
+	<div mat-dialog-content>
+		<div class="info">
+			<div>時間: <span class="x-time">{{punchTime}}</span></div>
+			<div>日期: {{punchDate}}</div>
+			<div>經度: {{lng}}</div>
+			<div>緯度: {{lat}}</div>
+		</div>
+	</div>
+	<div mat-dialog-actions  align="center">
+		<button mat-flat-button color="primary" (click)="punchList()">查看打卡紀錄</button>
+		<button mat-flat-button color="accent" mat-dialog-close >&nbsp;離開&nbsp;</button>
+	</div>
+</ng-template>

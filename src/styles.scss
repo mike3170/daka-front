@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  font-size: 16px;
+  box-sizing: border-box;
+
+	// --max-width: 1366;
+	--max-width: 1280px;
+
+	// font-size
+	--font-size-base: 1.1rem;
+  --font-size-xxl: 1.953rem;
+  --font-size-xl: 1.563rem;
+  --font-size-l: 1.25rem;
+  --font-size-m: 1rem;
+  --font-size-r: 1rem;
+  --font-size-s: 0.8rem;
+  --font-size-xs: 0.64rem;
+
+	// gray
+	--color-gray-0: #fff;
+	--color-gray-1: #eee;
+	--color-gray-2: #ccc;
+	--color-gray-3: #999;
+	--color-gray-4: #666;
+	--color-gray-5: #333;
+	--color-gray-6: #181818;
+	--color-brand-dark: #0008C1;
+  --color-brand-light: #2146C7;
+  --color-brand-alt-dark: #E6CBA8;
+  --color-brand-alt-light: #FDF0E0;
+
+	//  spacing
+	--spacer-xxl: 64px;
+  --spacer-xl: 32px;
+  --spacer-l: 16px;
+  --spacer-g: 9.888px;
+  --spacer-m:  8px;
+  --spacer-s:  4px;
+  --spacer-xs: 2px;
+
+	--padding-input: 3px 2px;
+
+	--z-loading-indicator: 100;
+	--z-nav-menu: 200;
+	--z-dropdown-menu: 300;
+	--z-modal-backdrop: 400;
+	--z-modal-body: 410;
+
+	--color-mia: red;
+	--color-dav: black; 
+}
+
+
+
+html, body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100%; 
+  font-size: 1rem ;
+  box-sizing: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+

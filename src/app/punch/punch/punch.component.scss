@@ -1,0 +1,45 @@
+.container {
+	height: 96%;
+	margin: 0 3px;
+}
+
+fieldset {
+	background-color: khaki;
+	border-radius: .5em;
+	margin-bottom: 1em;
+}
+
+.location {
+	h2 {
+		margin: 0;
+	}
+}
+
+.daka-btn {
+	width: 100%;
+}
+
+.dialog-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	font-size: 1.8rem !important;
+
+	font-weight: bold !important;
+}
+
+
+.x-icon {
+	transform: scale(1.5);
+}
+
+.info {
+	font-size: 1.5rem;
+	font-weight: bold;
+
+}
+
+.mat-query-btn{
+	color: lightgreen;
+}

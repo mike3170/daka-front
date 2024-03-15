@@ -1,0 +1,22 @@
+.header {
+	display: flex;
+	background-color: lightgreen;
+	padding: 3px;
+	
+	.title {
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+
+	.user {
+		display: flex;
+		gap: 1em;
+		margin-left: auto;
+
+		.person {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+}

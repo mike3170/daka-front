@@ -1,0 +1,49 @@
+<!-- <button (click)="doQuery('1')">query</button> -->
+
+<div style="margin: 0 .5em;">
+	<div style="display: flex; align-items: center;">
+		<div>請選擇:</div>
+		<mat-radio-group [formControl]="listType" (change)="selectChange($event)">
+			<mat-radio-button value="1" color="primary">當天</mat-radio-button>
+			<mat-radio-button value="2" color="primary">當月</mat-radio-button>
+			<mat-radio-button value="3" color="primary">上月</mat-radio-button>
+		</mat-radio-group>
+	</div>
+
+	<table style="width: 100%;">
+		<thead>
+			<tr>
+				<th>上班/下班</th>
+				<th>日期/時間</th>
+				<th>經度/緯度</th>
+				<th></th>
+			</tr>
+
+		</thead>
+		<tbody>
+			@for (card of punchCardList; track card.punchTime ) {
+				<tr>
+					<td align="center">
+						@if( card.kind === "1") {
+							上班
+						} @else {
+							下班
+						}
+					</td>
+					<td>
+						<div style="display: flex; flex-direction: column; align-items: center;">
+							<span>{{card.punchTime.toISODate()}}</span>
+							<span>{{card.punchTime.toFormat("hh:mm:ss")}}</span>
+						</div>
+					</td>
+					<td>
+						<div style="display: flex; flex-direction: column; align-items: center;">
+							<span>{{card.lng}}</span>
+							<span>{{card.lat}}</span>
+						</div>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
